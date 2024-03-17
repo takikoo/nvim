@@ -14,11 +14,18 @@ map('n', '<leader>n', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnosti
 
 map('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Remove highlight' })
 
+map('n', '<C-s>', '<cmd>w<CR>', { desc = 'Write buffer to file' })
+
 --  Use CTRL+<hjkl> to switch between windows
 map('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 map('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 map('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 map('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Buffer keymaps
+map('n', '<leader>bd', '<cmd>bd<CR>', { desc = '[B]uffer [D]elete' })
+map('n', '<leader>bn', '<cmd>bn<CR>', { desc = '[B]uffer [N]ext' })
+map('n', '<leader>bp', '<cmd>bn<CR>', { desc = '[B]uffer [P]revious' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
