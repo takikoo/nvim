@@ -12,9 +12,9 @@ map('n', '<leader>n', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnosti
 -- map('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 -- map('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
-map('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Remove highlight' })
+map({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and clear hlsearch' })
 
-map('n', '<C-s>', '<cmd>w<CR>', { desc = 'Write buffer to file' })
+map({ 'i', 'x', 'n', 's' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'Save file' })
 
 --  Use CTRL+<hjkl> to switch between windows
 map('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
@@ -26,6 +26,19 @@ map('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 map('n', '<leader>bd', '<cmd>bd<CR>', { desc = '[B]uffer [D]elete' })
 map('n', '<leader>bn', '<cmd>bn<CR>', { desc = '[B]uffer [N]ext' })
 map('n', '<leader>bp', '<cmd>bn<CR>', { desc = '[B]uffer [P]revious' })
+map('n', '<leader>bb', '<cmd>e #<cr>', { desc = '[B]uffer Switch to other [B]uffer' })
+
+-- lazy
+map('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Lazy' })
+
+-- Git
+map('n', '<leader>gg', '<cmd>LazyGit<cr>', { desc = '[G]it Lazy[G]it' })
+
+-- new file
+map('n', '<leader>fn', '<cmd>enew<cr>', { desc = 'New File' })
+
+-- quit
+map('n', '<leader>qq', '<cmd>qa<cr>', { desc = 'Quit all' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which

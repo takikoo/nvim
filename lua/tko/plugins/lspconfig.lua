@@ -3,7 +3,19 @@ return {
     'neovim/nvim-lspconfig',
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for neovim
-      'williamboman/mason.nvim',
+      {
+        'williamboman/mason.nvim',
+        cmd = 'Mason',
+        keys = { { '<leader>cm', '<cmd>Mason<cr>', desc = 'Mason' } },
+        build = ':MasonUpdate',
+        opts = {
+          ensure_installed = {
+            'stylua',
+            'shfmt',
+            -- "flake8",
+          },
+        },
+      },
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
