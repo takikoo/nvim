@@ -35,7 +35,7 @@ map('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Lazy' })
 map('n', '<leader>gg', '<cmd>LazyGit<cr>', { desc = '[G]it Lazy[G]it' })
 
 -- new file
-map('n', '<leader>fn', '<cmd>enew<cr>', { desc = 'New File' })
+map('n', '<leader>fn', '<cmd>enew<cr>', { desc = '[F]ile [N]ew' })
 
 -- quit
 map('n', '<leader>qq', '<cmd>qa<cr>', { desc = 'Quit all' })

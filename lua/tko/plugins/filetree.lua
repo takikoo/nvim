@@ -2,7 +2,7 @@ return {
   'nvim-neo-tree/neo-tree.nvim',
   branch = 'v3.x',
   keys = {
-    { '<leader>fe', '<cmd>Neotree toggle<cr>', desc = 'NeoTree' },
+    { '<leader>fe', '<cmd>Neotree toggle<cr>', desc = '[F]ile [E]xplorer' },
   },
   dependencies = {
     'nvim-lua/plenary.nvim',
