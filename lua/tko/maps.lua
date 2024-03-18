@@ -1,9 +1,5 @@
 local map = vim.keymap.set
--- map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
--- Remap for dealing with word wrap
--- map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
--- map('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Diagnostic keymaps
 map('n', '<leader>n', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
@@ -14,6 +10,7 @@ map('n', '<leader>n', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnosti
 
 map({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and clear hlsearch' })
 
+-- Save file
 map({ 'i', 'x', 'n', 's' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'Save file' })
 
 --  Use CTRL+<hjkl> to switch between windows
@@ -39,6 +36,9 @@ map('n', '<leader>fn', '<cmd>enew<cr>', { desc = '[F]ile [N]ew' })
 
 -- quit
 map('n', '<leader>qq', '<cmd>qa<cr>', { desc = 'Quit all' })
+
+-- Set current buffers directory to cwd
+map('n', '<leader>fw', '<cmd>lcd %:p:h<cr>', { desc = '[F]ile path to [C]urrent directory' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which

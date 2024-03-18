@@ -3,6 +3,7 @@ return {
   branch = 'v3.x',
   keys = {
     { '<leader>fe', '<cmd>Neotree toggle<cr>', desc = '[F]ile [E]xplorer' },
+    { '<leader>ff', '<cmd>Neotree toggle reveal %:p:h<cr>', desc = '[F]ile [F]ind current buffer' },
   },
   dependencies = {
     'nvim-lua/plenary.nvim',
