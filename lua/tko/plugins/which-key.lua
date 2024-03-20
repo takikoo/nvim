@@ -15,6 +15,7 @@ return {
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
         ['<leader>x'] = { name = '[X]Diagnostics', _ = 'which_key_ignore' },
         ['<leader>q'] = { name = '[Q]uit', _ = 'which_key_ignore' },
+        ['<leader>t'] = { name = 'Personal maps', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
       }
     end,

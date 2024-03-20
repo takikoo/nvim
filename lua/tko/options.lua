@@ -6,6 +6,11 @@ opt.inccommand = 'split'
 -- Show which line your cursor is on
 opt.cursorline = true
 
+-- Make line numbers, relative line numbers, and word wrap default
+opt.number = true
+opt.relativenumber = true
+opt.wrap = false
+
 -- Minimal number of screen lines to keep above and below the cursor.
 opt.scrolloff = 10
 
@@ -23,10 +28,6 @@ opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 -- Set highlight on search
 opt.hlsearch = true
 opt.incsearch = true
-
--- Make line numbers default
-opt.number = true
-opt.relativenumber = true
 
 -- Enable break indent
 opt.breakindent = true
