@@ -1,6 +1,18 @@
 local map = vim.keymap.set
 map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+-- Send buffer to terminal
+map('n', '<leader>tt', ':%! ', { desc = 'Send buffer to terminal' })
+
+-- Format buffer with jq and set filetype to json
+map('n', '<leader>tj', ':%!jq<cr>:set ft=json<cr>', { desc = 'Format buffer with jq', silent = true })
+
+-- Format buffer with xmlstarlet and set filetype to xml
+map('n', '<leader>tx', ':%!xmlstarlet fo<cr>:set ft=xml<cr>', { desc = 'Format buffer with xmlstarlet', silent = true })
+
+-- Replace the word under the cursor with s/
+map('n', '<leader>tr', ':%s/\\<<C-r><C-w>\\>/', { desc = 'Replace the word under the cursor' })
+
 -- Diagnostic keymaps
 map('n', '<leader>n', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
 -- map('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
