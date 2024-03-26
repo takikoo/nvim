@@ -1,6 +1,11 @@
 local map = vim.keymap.set
 map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+-- Clipboard keymaps
+map('v', '<C-c>', '"+y', { desc = 'Copy to system clipboard' })
+map('v', '<C-d>', '"+d', { desc = 'Cut to system clipboard' })
+map('i', '<C-v>', '<ESC>"+pa', { desc = 'Paste from system clipboard' })
+
 -- Send buffer to terminal
 map('n', '<leader>tt', ':%! ', { desc = 'Send buffer to terminal' })
 
@@ -12,6 +17,9 @@ map('n', '<leader>tx', ':%!xmlstarlet fo<cr>:set ft=xml<cr>', { desc = 'Format b
 
 -- Replace the word under the cursor with s/
 map('n', '<leader>tr', ':%s/\\<<C-r><C-w>\\>/', { desc = 'Replace the word under the cursor' })
+
+-- Filter the buffer through csvcut and set filetype to csv
+map('n', '<leader>th', ':set ft=csv<cr>:%!csvcut -n', { desc = 'Filter the buffer through csvcut' })
 
 -- Diagnostic keymaps
 map('n', '<leader>n', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
