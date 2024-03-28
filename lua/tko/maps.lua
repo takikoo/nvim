@@ -6,6 +6,9 @@ map('v', '<C-c>', '"+y', { desc = 'Copy to system clipboard' })
 map('v', '<C-d>', '"+d', { desc = 'Cut to system clipboard' })
 map('i', '<C-v>', '<ESC>"+pa', { desc = 'Paste from system clipboard' })
 
+-- Yank buffer to system clipboard
+map('n', '<leader>y', '<cmd>%y+<cr>', { desc = 'Yank buffer to system clipboard', silent = true })
+
 -- Send buffer to terminal
 map('n', '<leader>tt', ':%! ', { desc = 'Send buffer to terminal' })
 

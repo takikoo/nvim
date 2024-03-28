@@ -1,5 +1,10 @@
 local opt = vim.opt
 
+-- Set default tab width to 2 spaces
+opt.expandtab = true
+opt.tabstop = 2
+opt.shiftwidth = 2
+
 -- Preview substitutions live, as you type!
 opt.inccommand = 'split'
 
