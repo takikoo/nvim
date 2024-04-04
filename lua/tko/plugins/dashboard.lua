@@ -15,6 +15,7 @@ local header = {
 
 return {
   'nvimdev/dashboard-nvim',
+  enabled = false,
   dependencies = { { 'nvim-tree/nvim-web-devicons' } },
   event = 'VimEnter',
   opts = {
