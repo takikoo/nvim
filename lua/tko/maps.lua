@@ -1,5 +1,6 @@
 local map = vim.keymap.set
 map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+map('n', '-', '<cmd>Oil<cr>', { silent = true })
 
 -- Clipboard keymaps
 map('v', '<C-c>', '"+y', { desc = 'Copy to system clipboard' })

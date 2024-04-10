@@ -1,7 +1,13 @@
 -- NOTE: PLUGINS
-require('lazy').setup({
-  { import = 'tko.plugins' },
-}, {
+require('lazy').setup('tko.plugins', {
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    enabled = true,
+    notify = false,
+  },
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons otherwise define a unicode icons table
