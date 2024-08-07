@@ -48,6 +48,7 @@ map('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Lazy' })
 
 -- Git
 map('n', '<leader>gg', '<cmd>LazyGit<cr>', { desc = '[G]it Lazy[G]it' })
+map('n', '<leader>gf', '<cmd>LazyGitFilterCurrentFile<cr>', { desc = '[G]it Lazygit current [F]ile' })
 
 -- new file
 map('n', '<leader>fn', '<cmd>enew<cr>', { desc = '[F]ile [N]ew' })

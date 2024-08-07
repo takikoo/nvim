@@ -1,22 +1,23 @@
 return {
   {
     'folke/which-key.nvim',
-    event = 'VimEnter',
+    event = 'VeryLazy',
     config = function()
-      require('which-key').setup()
-
-      require('which-key').register {
-        ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-        ['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
-        ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-        ['<leader>f'] = { name = '[F]ile', _ = 'which_key_ignore' },
-        ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
-        ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-        ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-        ['<leader>x'] = { name = '[X]Diagnostics', _ = 'which_key_ignore' },
-        ['<leader>q'] = { name = '[Q]uit', _ = 'which_key_ignore' },
-        ['<leader>t'] = { name = 'Personal maps', _ = 'which_key_ignore' },
-        ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+      local wk = require 'which-key'
+      wk.setup()
+      wk.add {
+        { '<leader>c', group = '[C]ode' },
+        { '<leader>b', group = '[B]uffer' },
+        { '<leader>d', group = '[D]ocument' },
+        { '<leader>f', group = '[F]ile' },
+        { '<leader>g', group = '[G]it' },
+        { '<leader>gh', group = '[H]unk' },
+        { '<leader>r', group = '[R]ename' },
+        { '<leader>s', group = '[S]earch' },
+        { '<leader>x', group = '[X]Diagnostics' },
+        { '<leader>q', group = '[Q]uit' },
+        { '<leader>t', group = 'Personal maps' },
+        { '<leader>w', group = '[W]orkspace' },
       }
     end,
   },
