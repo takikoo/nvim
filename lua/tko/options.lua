@@ -2,6 +2,7 @@ local opt = vim.opt
 
 -- Set default tab width to 2 spaces
 opt.expandtab = true
+opt.smartindent = true
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.softtabstop = 2

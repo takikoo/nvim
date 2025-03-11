@@ -1,5 +1,6 @@
 return {
   'folke/trouble.nvim',
+  event = 'VimEnter',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   keys = {
     { '<leader>xx', '<cmd>Trouble<cr>', desc = 'Toggle trouble' },

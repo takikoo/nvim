@@ -1,3 +1,5 @@
+local NO_PLUGINS = vim.env.NOPLUGINS
+
 -- [[ Global variables ]]
 require 'tko.globals'
 
@@ -9,6 +11,11 @@ require 'tko.maps'
 
 -- [[ Auto commands ]]
 require 'tko.autocommands'
+
+if NO_PLUGINS then
+  -- Do not load plugins
+  return
+end
 
 -- [[ Lazy Plugin Manager ]]
 require 'tko.lazy-bootstrap'
